@@ -1,0 +1,43 @@
+package ua.fleym.flardex;
+
+import java.util.List;
+
+import net.md_5.bungee.api.plugin.Plugin;
+import net.md_5.bungee.config.Configuration;
+import ua.fleym.flardex.announcer.Announcer;
+import ua.fleym.flardex.managers.MessageManager;
+
+public class Main extends Plugin {
+	
+	private static int online;
+	private Configuration config;
+	private static List<String> lobbys;
+	private static List<String> block_rejoin;
+	private static List<String> swear;
+	public String prefix;
+	public MessageManager msgmanager;
+	public static Main instance;
+	public static List<String> admins_nicks;
+	static String header;
+	public String footer;
+	private static Announcer announcer;
+	
+	public static Main getInstance() {
+		return Main.instance;
+	}
+		public static Announcer getAnnouncer() {
+			return Main.announcer;
+		}
+			public static int getOnline() {
+				return Main.online;
+			}
+				public static void setOnline(final int online) {
+					Main.online = online;
+				}
+					public String getPrefix() {
+						return this.prefix;
+						
+	}
+	
+
+}
